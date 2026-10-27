@@ -29,7 +29,7 @@ import {
 } from 'lucide-react';
 
 import { BookingDetailModal } from '../components/BookingDetailModal';
-import { AdminTourModal } from '../components/AdminTourModal';
+import { AdminTourModal } from '../components/AdminModal';
 
 // Local Data imports for the Migration Tool
 import { TOURS_DATA } from '../data/toursData';
