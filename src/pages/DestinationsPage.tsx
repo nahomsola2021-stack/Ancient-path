@@ -3,15 +3,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import { collection, onSnapshot } from 'firebase/firestore';
 import { db } from '../config/firebase';
 import { 
-  Mountain, 
-  Sparkles, 
-  ArrowRight, 
-  Search, 
-  X,
-  Loader2
+  Mountain, Sparkles, ArrowRight, Search, X, Loader2
 } from 'lucide-react';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { InteractiveMap } from '../components/InteractiveMap';
+import { SEO } from '../components/SEO'; // <-- SEO IMPORTED HERE
 
 export const DestinationsPage: React.FC = () => {
   const navigate = useNavigate();
@@ -39,32 +35,22 @@ export const DestinationsPage: React.FC = () => {
 
   useEffect(() => {
     if (!pageRef.current || isLoading) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('opacity-100', 'translate-y-0');
-            entry.target.classList.remove('opacity-0', 'translate-y-12');
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    );
-    const revealElements = pageRef.current.querySelectorAll('.scroll-reveal');
-    revealElements.forEach((el) => observer.observe(el));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-12');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    
+    pageRef.current.querySelectorAll('.scroll-reveal').forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, [selectedRegion, searchQuery, isLoading]);
 
-  // Robust Filtering Logic
   const filteredDestinations = useMemo(() => {
     return destinations.filter((dest) => {
-      // 1. Region Filter
-      if (selectedRegion !== 'All') {
-        const destRegion = dest.region?.toLowerCase() || '';
-        if (destRegion !== selectedRegion.toLowerCase()) return false;
-      }
-      
-      // 2. Search Filter
+      if (selectedRegion !== 'All' && dest.region?.toLowerCase() !== selectedRegion.toLowerCase()) return false;
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase();
         const matchesName = dest.name?.toLowerCase().includes(q);
@@ -78,6 +64,11 @@ export const DestinationsPage: React.FC = () => {
 
   return (
     <div ref={pageRef} className="min-h-screen bg-[#FDFBF7] text-[#1A1A1A] font-sans overflow-hidden">
+      <SEO 
+        title="Destinations & Places of Wonder"
+        description="From the high-altitude monoliths of the north to the otherworldly Danakil Depression, Ethiopia, and the deep tribal valleys of the south."
+        keywords="danakil depression ethiopia, ethiopia destinations, african safari, ethiopia tours"
+      />
       
       {/* HERO SECTION */}
       <section className="relative h-[60vh] min-h-[500px] w-full flex items-end pb-16 overflow-hidden">
@@ -98,8 +89,8 @@ export const DestinationsPage: React.FC = () => {
           <h1 className="font-serif text-5xl md:text-7xl font-normal text-white tracking-tight leading-none mb-6 drop-shadow-lg">
             Places of Wonder
           </h1>
-          <p className="text-lg md:text-xl text-white/90 font-light max-w-2xl drop-shadow-md">
-            From the high-altitude monoliths of the north to the afro-alpine cloud forests and deep tribal valleys of the south.
+          <p className="text-lg md:text-xl text-white/90 font-light max-w-3xl drop-shadow-md">
+            From the high-altitude monoliths of the north to the otherworldly <strong>Danakil Depression, Ethiopia</strong>, and the deep tribal valleys of the south perfect for an authentic <strong>African safari</strong>.
           </p>
         </div>
       </section>
@@ -108,8 +99,6 @@ export const DestinationsPage: React.FC = () => {
       <section className="sticky top-0 z-40 bg-[#FDFBF7]/95 backdrop-blur-md border-b border-gray-200 transition-all shadow-sm">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-3 md:py-4">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 md:gap-4">
-            
-            {/* Horizontal Scrollable Regions */}
             <div className="flex items-center gap-6 overflow-x-auto hide-scrollbar w-full md:w-auto -mx-4 px-4 md:mx-0 md:px-0 pb-1">
               {(['All', 'North', 'South', 'East', 'Central'] as const).map((reg) => (
                 <button
@@ -124,22 +113,12 @@ export const DestinationsPage: React.FC = () => {
               ))}
             </div>
 
-            {/* Smart Search Toggle */}
             <div className="flex items-center w-full md:w-auto justify-end">
               {isSearchOpen ? (
                 <div className="flex items-center border-b border-black w-full md:w-64 pb-1 animate-fade-in">
                   <Search className="w-4 h-4 text-black mr-2 shrink-0" />
-                  <input 
-                    type="text" 
-                    autoFocus
-                    placeholder="Search places..." 
-                    className="bg-transparent border-none outline-none text-sm w-full font-serif italic placeholder:text-gray-400"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                  />
-                  <button onClick={() => { setIsSearchOpen(false); setSearchQuery(''); }} className="shrink-0">
-                    <X className="w-4 h-4 text-gray-400 hover:text-black" />
-                  </button>
+                  <input type="text" autoFocus placeholder="Search places..." className="bg-transparent border-none outline-none text-sm w-full font-serif italic placeholder:text-gray-400" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
+                  <button onClick={() => { setIsSearchOpen(false); setSearchQuery(''); }} className="shrink-0"><X className="w-4 h-4 text-gray-400 hover:text-black" /></button>
                 </div>
               ) : (
                 <button onClick={() => setIsSearchOpen(true)} className="text-[11px] md:text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-black transition-colors flex items-center gap-2">
@@ -147,7 +126,6 @@ export const DestinationsPage: React.FC = () => {
                 </button>
               )}
             </div>
-
           </div>
         </div>
       </section>
@@ -248,20 +226,10 @@ export const DestinationsPage: React.FC = () => {
       </section>
 
       <style dangerouslySetInnerHTML={{__html: `
-        @keyframes slowZoom {
-          0% { transform: scale(1); }
-          100% { transform: scale(1.08); }
-        }
-        .animate-slow-zoom {
-          animation: slowZoom 25s ease-in-out infinite alternate;
-        }
-        @keyframes fadeIn {
-          from { opacity: 0; width: 0; }
-          to { opacity: 1; width: 100%; }
-        }
-        .animate-fade-in {
-          animation: fadeIn 0.3s ease-out forwards;
-        }
+        @keyframes slowZoom { 0% { transform: scale(1); } 100% { transform: scale(1.08); } }
+        .animate-slow-zoom { animation: slowZoom 25s ease-in-out infinite alternate; }
+        @keyframes fadeIn { from { opacity: 0; width: 0; } to { opacity: 1; width: 100%; } }
+        .animate-fade-in { animation: fadeIn 0.3s ease-out forwards; }
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
       `}} />

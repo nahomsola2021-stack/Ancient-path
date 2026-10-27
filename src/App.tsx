@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async'; // <-- IMPORTED SEO PROVIDER HERE
+
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
@@ -11,7 +13,7 @@ import { BookingModal } from './components/BookingModal';
 
 // Auth and Admin
 import { AuthProvider } from './contexts/AuthContext';
-import { ProtectedRoute } from './components/ProtectedRoute'; // <-- IMPORTED YOUR LOCK HERE
+import { ProtectedRoute } from './components/ProtectedRoute';
 import { Dashboard } from './pages/Dashboard';
 import { Login } from './pages/Login';
 
@@ -187,7 +189,7 @@ const AppContent: React.FC = () => {
             element={<Login />} 
           />
           
-          {/* THE LOCK: Dashboard is now securely wrapped in ProtectedRoute */}
+          {/* THE LOCK: Dashboard securely wrapped in ProtectedRoute */}
           <Route 
             path="/dashboard" 
             element={
@@ -307,11 +309,14 @@ const AppContent: React.FC = () => {
 
 export function App() {
   return (
-    <AuthProvider>
-      <BrowserRouter>
-        <AppContent />
-      </BrowserRouter>
-    </AuthProvider>
+    /* SEO PROVIDER WRAPS THE ENTIRE APP */
+    <HelmetProvider>
+      <AuthProvider>
+        <BrowserRouter>
+          <AppContent />
+        </BrowserRouter>
+      </AuthProvider>
+    </HelmetProvider>
   );
 }
 

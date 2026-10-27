@@ -3,15 +3,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import { collection, onSnapshot, query, orderBy, limit } from 'firebase/firestore';
 import { db } from '../config/firebase';
 import { 
-  ArrowRight, 
-  MapPin, 
-  Compass,
-  Star,
-  ChevronLeft,
-  ChevronRight,
-  Loader2
+  ArrowRight, MapPin, Compass, Star, ChevronLeft, ChevronRight, Loader2
 } from 'lucide-react';
 import { TourPackage } from '../types';
+import { SEO } from '../components/SEO';
 
 interface HomePageProps {
   onPlanWithTour: (tour: TourPackage) => void;
@@ -22,21 +17,22 @@ interface HomePageProps {
 }
 
 export const HomePage: React.FC<HomePageProps> = ({
+  onPlanWithTour,
+  savedTourIds,
+  onToggleSaveTour,
+  onSelectTourModal,
   onOpenBooking
 }) => {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // <-- Correctly placed inside the component body
   const pageRef = useRef<HTMLDivElement>(null);
   
-  // LIVE FIREBASE STATE
   const [featuredTours, setFeaturedTours] = useState<any[]>([]);
   const [featuredDestinations, setFeaturedDestinations] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const qTours = query(collection(db, 'tours'), orderBy('createdAt', 'desc'), limit(4));
-    const unsubTours = onSnapshot(qTours, (snap) => {
-      setFeaturedTours(snap.docs.map(doc => ({ id: doc.id, ...doc.data() })));
-    });
+    const unsubTours = onSnapshot(qTours, (snap) => setFeaturedTours(snap.docs.map(doc => ({ id: doc.id, ...doc.data() }))));
 
     const qDest = query(collection(db, 'destinations'), orderBy('createdAt', 'desc'), limit(5));
     const unsubDest = onSnapshot(qDest, (snap) => {
@@ -47,9 +43,10 @@ export const HomePage: React.FC<HomePageProps> = ({
     return () => { unsubTours(); unsubDest(); };
   }, []);
 
+  // NATURAL KEYWORD INJECTION in the Hero Slider
   const heroSlides = [
     { image: "https://res.cloudinary.com/dw1ohipim/image/upload/v1789937596/ebenwalotmbgiqszetie.jpg", kicker: "THE NORTHERN CIRCUIT", title: "The Ancient Kingdoms", subtitle: "Discover the historic heart of Ethiopia through rock-hewn churches, royal castles, and dramatic mountain landscapes." },
-    { image: "https://res.cloudinary.com/dw1ohipim/image/upload/v1789937854/qqoecq1zq0gh0ixocyrw.jpg", kicker: "THE OMO VALLEY", title: "Living Traditions", subtitle: "Immerse yourself in the vibrant, untouched cultures and extraordinary tribes of the south." },
+    { image: "https://res.cloudinary.com/dw1ohipim/image/upload/v1789937854/qqoecq1zq0gh0ixocyrw.jpg", kicker: "THE OMO VALLEY", title: "Living Traditions", subtitle: "Immerse yourself in vibrant, untouched cultures on our premier African safari tours through the extraordinary tribal valleys of the south." },
     { image: "https://res.cloudinary.com/dw1ohipim/image/upload/v1789938018/mhnlbosuyl5sfwq5r8jb.jpg", kicker: "SIMIEN MOUNTAINS", title: "The Roof of Africa", subtitle: "Trek through breathtaking escarpments and encounter endemic high-altitude species found nowhere else on earth." }
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -83,24 +80,26 @@ export const HomePage: React.FC<HomePageProps> = ({
 
   useEffect(() => {
     if (!pageRef.current || isLoading) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('opacity-100', 'translate-y-0');
-            entry.target.classList.remove('opacity-0', 'translate-y-12');
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    );
-    const revealElements = pageRef.current.querySelectorAll('.scroll-reveal');
-    revealElements.forEach((el) => observer.observe(el));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-12');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    
+    pageRef.current.querySelectorAll('.scroll-reveal').forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, [isLoading]);
 
   return (
     <div ref={pageRef} className="min-h-screen bg-[#FDFBF7] text-[#1A1A1A] overflow-hidden font-sans">
+      <SEO 
+        title="Premier Ethiopian Travel Agency & Tours"
+        description="Experience the magic of the Horn of Africa with Ancient Path, a premier Ethiopian travel agency offering historical expeditions and breathtaking African safari tours."
+        keywords="ethiopian travel agency, african safari tours, ancient path ethiopia, ethiopia travel"
+      />
       
       {/* 1. SLIDESHOW HERO SECTION */}
       <section className="relative h-screen min-h-[700px] w-full flex items-center overflow-hidden bg-black -mt-16 lg:-mt-24">
@@ -136,9 +135,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               <button onClick={nextSlide} className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors backdrop-blur-md"><ChevronRight className="w-5 h-5" /></button>
             </div>
             <div className="flex items-center gap-6 w-full md:w-auto">
-              <span className="text-white font-serif text-lg">
-                0{currentSlide + 1} <span className="text-white/40 text-sm mx-1">/</span> <span className="text-white/40 text-sm">0{heroSlides.length}</span>
-              </span>
+              <span className="text-white font-serif text-lg">0{currentSlide + 1} <span className="text-white/40 text-sm mx-1">/</span> <span className="text-white/40 text-sm">0{heroSlides.length}</span></span>
               <div className="h-[2px] w-48 bg-white/20 relative overflow-hidden flex-1 md:flex-none">
                 <div key={currentSlide} className="absolute top-0 left-0 h-full bg-[#B85C38] animate-progress-fill" />
               </div>
@@ -149,6 +146,10 @@ export const HomePage: React.FC<HomePageProps> = ({
 
       {/* 2. QUICK DISCOVERY */}
       <section className="py-24 px-4 md:px-8 max-w-[1400px] mx-auto">
+        {/* NATURAL KEYWORD INJECTION: Ethiopian travel agency */}
+        <p className="text-center text-gray-500 max-w-2xl mx-auto mb-8 scroll-reveal opacity-0 translate-y-12 transition-all duration-1000">
+          As a dedicated <strong>Ethiopian travel agency</strong>, we craft authentic experiences that connect you deeply with the land and its people.
+        </p>
         <h2 className="text-center text-xs font-bold tracking-[0.25em] text-[#B85C38] mb-16 uppercase scroll-reveal opacity-0 translate-y-12 transition-all duration-1000">Choose Your Experience</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {discoveryCategories.map((cat, idx) => (
