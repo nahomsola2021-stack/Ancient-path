@@ -128,7 +128,8 @@ export const ToursPage: React.FC<ToursPageProps> = ({
       </section>
 
       {/* COMPACT & MOBILE-OPTIMIZED FILTER BAR */}
-      <section className="bg-white border-b border-gray-200 sticky top-0 z-40 shadow-sm">
+      {/* FIXED z-20 instead of z-40 so it goes behind the mobile nav menu */}
+      <section className="bg-white border-b border-gray-200 sticky top-[-1px] z-20 shadow-sm">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-3 md:py-5">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 md:gap-6">
             
@@ -263,7 +264,7 @@ export const ToursPage: React.FC<ToursPageProps> = ({
           <p className="text-gray-400 text-sm md:text-lg max-w-2xl mx-auto mb-8 md:mb-10 font-light">
             Combine historical sites, wildlife encounters, and cultural experiences into a private itinerary tailored exactly to your rhythm.
           </p>
-          <button onClick={() => navigate('/planner')} className="px-8 py-3.5 md:py-4 bg-white text-black text-xs font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors rounded-full">
+          <button onClick={() => navigate('/planner')} className="px-8 md:px-10 py-3.5 md:py-4 bg-white text-black text-xs font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors rounded-full">
             Start Journey Planner
           </button>
         </div>
