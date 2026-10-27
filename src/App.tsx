@@ -11,6 +11,7 @@ import { BookingModal } from './components/BookingModal';
 
 // Auth and Admin
 import { AuthProvider } from './contexts/AuthContext';
+import { ProtectedRoute } from './components/ProtectedRoute'; // <-- IMPORTED YOUR LOCK HERE
 import { Dashboard } from './pages/Dashboard';
 import { Login } from './pages/Login';
 
@@ -185,9 +186,15 @@ const AppContent: React.FC = () => {
             path="/login" 
             element={<Login />} 
           />
+          
+          {/* THE LOCK: Dashboard is now securely wrapped in ProtectedRoute */}
           <Route 
             path="/dashboard" 
-            element={<Dashboard />} 
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            } 
           />
 
           {/* Catch-all fallback */}
