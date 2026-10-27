@@ -8,7 +8,7 @@ import {
   ETHIOPIA_VIEWBOX,
   projectLonLatToPercent,
   type LegacyZone,
-} from '../data/ethiopiaGeography';
+} from '../data/map-data';
 
 interface InteractiveMapProps {
   onSelectDestination: (dest: Destination) => void;
