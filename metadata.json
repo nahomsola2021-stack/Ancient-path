@@ -1,0 +1,6 @@
+{
+  "name": "Ancient Path Ethiopia",
+  "description": "Luxury, thoughtful, and authentic journeys through Ethiopia's ancient history, living cultures, and dramatic landscapes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

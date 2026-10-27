@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-display: 'Cinzel', serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #F8F5EF;
+    color: #252525;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F5EF;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8CBBB;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B85C38;
+}
+
+.text-deep-forest {
+  color: #173C35;
+}
+.bg-deep-forest {
+  background-color: #173C35;
+}
+.border-deep-forest {
+  border-color: #173C35;
+}
+
+.text-terracotta {
+  color: #B85C38;
+}
+.bg-terracotta {
+  background-color: #B85C38;
+}
+.border-terracotta {
+  border-color: #B85C38;
+}
+
+.bg-warm-sand {
+  background-color: #E8D8BD;
+}
+.text-warm-sand {
+  color: #E8D8BD;
+}
+.border-warm-sand {
+  border-color: #E8D8BD;
+}
+
+.bg-ivory {
+  background-color: #F8F5EF;
+}
+.text-ivory {
+  color: #F8F5EF;
+}
+
+.text-charcoal {
+  color: #252525;
+}
+
+.text-muted-gold {
+  color: #B8955A;
+}
+.bg-muted-gold {
+  background-color: #B8955A;
+}
+.border-muted-gold {
+  border-color: #B8955A;
+}
+
