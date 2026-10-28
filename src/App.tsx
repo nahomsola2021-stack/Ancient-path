@@ -30,7 +30,7 @@ import { FaqsPage } from './pages/FaqsPage';
 import { ContactPage } from './pages/ContactPage';
 
 import { TourPackage, Destination } from './types';
-import { Sparkles, MessageSquare } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 const AppContent: React.FC = () => {
   const navigate = useNavigate();
@@ -298,7 +298,9 @@ const AppContent: React.FC = () => {
                 className="relative w-12 h-12 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(37,211,102,0.6)] transition-transform hover:scale-110 cursor-pointer"
               >
                 <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-75 animate-ping" />
-                <MessageSquare className="w-6 h-6 fill-current text-white relative z-10" />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-7 h-7 fill-current text-white relative z-10">
+                  <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 414.2c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 334.1l-4.4-7.1c-18.4-29.6-28.1-63.7-28.1-98.9 0-101.4 82.5-183.9 184.1-183.9 54.1 0 105 21.1 143.3 59.4 38.3 38.3 59.4 89.2 59.4 143.3 0 101.4-82.5 183.9-183.9 183.9zM312.8 284c-4.9-2.5-28.9-14.3-33.4-15.9-4.5-1.6-7.8-2.5-11.1 2.5-3.3 5-12.6 15.9-15.4 19.2-2.8 3.3-5.7 3.7-10.6 1.2-4.9-2.5-20.6-7.6-39.2-24.1-14.4-12.8-24.1-28.6-26.9-33.6-2.8-5-1.2-7.8 1.2-10.3 2.1-2.1 4.9-5.7 7.4-8.6 2.5-2.9 3.3-5 5-8.2 1.6-3.3 .8-6.1-.4-8.6-1.2-2.5-11.1-26.8-15.2-36.7-4.1-9.7-8.2-8.4-11.1-8.5-2.8-.1-6.1-.1-9.4-.1s-8.6 1.2-13.1 6.1c-4.5 4.9-17.2 16.8-17.2 41s17.6 47.6 20.1 50.9c2.5 3.3 34.7 53 84.1 74.3 11.8 5.1 21 8.1 28.2 10.4 11.8 3.7 22.5 3.2 31 1.9 9.5-1.5 28.9-11.8 33-23.2 4.1-11.4 4.1-21.2 2.8-23.2-1.3-2-4.9-3.3-9.8-5.8z"/>
+                </svg>
               </a>
             </div>
           </div>
