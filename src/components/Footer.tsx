@@ -12,10 +12,11 @@ export const Footer = () => {
           {/* Brand Statement Column */}
           <div className="lg:col-span-4 space-y-4">
             <Link to="/" className="inline-block focus:outline-none mb-2">
-              <img 
+<img 
                 src="/logo.svg" 
                 alt="Ancient Path Ethiopia" 
                 className="h-12 sm:h-30 w-auto object-contain"
+                loading="lazy"
               />
             </Link>
 
@@ -110,3 +111,5 @@ export const Footer = () => {
     </footer>
   );
 };
+
+

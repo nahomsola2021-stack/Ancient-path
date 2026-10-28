@@ -274,3 +274,4 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
     </div>
   );
 };
+

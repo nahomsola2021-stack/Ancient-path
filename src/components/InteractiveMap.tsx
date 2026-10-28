@@ -169,10 +169,11 @@ export const InteractiveMap = ({ onSelectDestination, selectedDestinationId }: I
                   {hoveredDest.name}
                 </h4>
               </div>
-              <img
+<img
                 src={hoveredDest.image}
                 alt={hoveredDest.name}
                 className="w-12 h-12 rounded-lg object-cover border border-[#E8D8BD]"
+                loading="lazy"
               />
             </div>
 
@@ -210,3 +211,5 @@ export const InteractiveMap = ({ onSelectDestination, selectedDestinationId }: I
     </div>
   );
 };
+
+

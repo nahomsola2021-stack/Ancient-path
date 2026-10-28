@@ -69,10 +69,10 @@ export const WhyUsSection = ({ onPlanJourney }: WhyUsSectionProps) => {
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-2xl overflow-hidden border border-[#E8D8BD] shadow-md">
               <img
-                src="https://res.cloudinary.com/dw1ohipim/image/upload/v1784044759/obsdtkl6xk8xosibyqj0.jpg"
+                src="https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1784044759/obsdtkl6xk8xosibyqj0.jpg"
                 alt="Ethiopian landscape and hospitality"
                 className="w-full h-[420px] object-cover"
-              />
+               loading="lazy" />
               
               {/* Floating Badge */}
               <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md border border-[#E8D8BD] p-4 rounded-xl shadow-lg">
@@ -160,3 +160,6 @@ export const WhyUsSection = ({ onPlanJourney }: WhyUsSectionProps) => {
     </section>
   );
 };
+
+
+

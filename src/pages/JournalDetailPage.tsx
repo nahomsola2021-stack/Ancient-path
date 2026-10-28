@@ -240,3 +240,4 @@ export const JournalDetailPage: React.FC = () => {
     </div>
   );
 };
+

@@ -12,17 +12,17 @@ export const Hero = ({ onExploreTours, onPlanJourney }: HeroProps) => {
 
   const heroBackgrounds = [
     {
-      url: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1787132831/bkck551eiil1tnfsdvkn.webp',
+      url: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1787132831/bkck551eiil1tnfsdvkn.webp',
       title: 'Lalibela',
       desc: 'Rock-hewn monolithic churches carved into eternity'
     },
     {
-      url: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1784044758/hu0fmtskwk5bkljeuvck.jpg',
+      url: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1784044758/hu0fmtskwk5bkljeuvck.jpg',
       title: 'Simien Mountains',
       desc: 'Dramatic escarpments on the Roof of Africa'
     },
     {
-      url: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1785762596/at38awk2jml8g4legvyy.webp',
+      url: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1785762596/at38awk2jml8g4legvyy.webp',
       title: 'Omo Valley',
       desc: 'Cultural Figures and Tribes of Omo Valley'
     }
@@ -46,7 +46,7 @@ export const Hero = ({ onExploreTours, onPlanJourney }: HeroProps) => {
             idx === currentBgIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
         >
-          <img
+<img
             src={bg.url}
             alt={bg.title}
             className="w-full h-full object-cover object-center brightness-[0.62] contrast-[1.05]"
@@ -122,3 +122,6 @@ export const Hero = ({ onExploreTours, onPlanJourney }: HeroProps) => {
     </section>
   );
 };
+
+
+

@@ -64,7 +64,7 @@ export const ContactPage: React.FC = () => {
       {/* 1. CINEMATIC HERO SECTION */}
       <section className="relative h-[60vh] min-h-[500px] w-full flex items-end pb-16 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="https://res.cloudinary.com/dw1ohipim/image/upload/v1789940781/h55fa5c81btyxgl7zevs.jpg" alt="Ethiopian Landscape" className="w-full h-full object-cover animate-slow-zoom brightness-[0.55]" />
+          <img src="https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789940781/h55fa5c81btyxgl7zevs.jpg" alt="Ethiopian Landscape" className="w-full h-full object-cover animate-slow-zoom brightness-[0.55]" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
         </div>
 
@@ -219,3 +219,4 @@ export const ContactPage: React.FC = () => {
     </div>
   );
 };
+

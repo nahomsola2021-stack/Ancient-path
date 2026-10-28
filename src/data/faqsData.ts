@@ -141,3 +141,4 @@ export const TRAVEL_INFO_CARDS = [
     details: 'When sharing an authentic coffee ceremony or communal meal, eating with the right hand is customary. Our local guides help you navigate all cultural nuances seamlessly.'
   }
 ];
+

@@ -212,3 +212,4 @@ export function BookingDetailModal({ booking, onClose, onAccept, onReject, onDel
     </div>
   );
 }
+

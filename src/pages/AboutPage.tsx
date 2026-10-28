@@ -50,7 +50,7 @@ export const AboutPage: React.FC = () => {
       {/* 1. CINEMATIC HERO SECTION */}
       <section className="relative h-[70vh] min-h-[500px] w-full flex items-end pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="https://res.cloudinary.com/dw1ohipim/image/upload/v1789394787/cymogm0xdqu0vm8lfqmo.jpg" alt="Ethiopian Landscape" className="w-full h-full object-cover animate-slow-zoom brightness-[0.55]" />
+          <img src="https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789394787/cymogm0xdqu0vm8lfqmo.jpg" alt="Ethiopian Landscape" className="w-full h-full object-cover animate-slow-zoom brightness-[0.55]" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
         </div>
 
@@ -93,7 +93,7 @@ export const AboutPage: React.FC = () => {
             <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full shadow-xl animate-float blur-[2px] opacity-70" style={{ animationDelay: '0s' }} />
             <div className="absolute bottom-20 right-10 w-48 h-48 bg-white rounded-full shadow-2xl animate-float blur-[3px] opacity-50" style={{ animationDelay: '2s' }} />
             <div className="relative z-10 w-full h-full rounded-[2.5rem] overflow-hidden shadow-[0_40px_80px_rgba(0,0,0,0.15)] animate-float border-[12px] border-white">
-              <img src="https://res.cloudinary.com/dw1ohipim/image/upload/v1789940161/iwkw0hrvixicb5zh8g1y.jpg" alt="Abenezer in Ethiopia" className="w-full h-full object-cover object-top" />
+              <img src="https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789940161/iwkw0hrvixicb5zh8g1y.jpg" alt="Abenezer in Ethiopia" className="w-full h-full object-cover object-top" />
             </div>
           </div>
         </div>
@@ -111,7 +111,7 @@ export const AboutPage: React.FC = () => {
             <div className="lg:col-span-5 relative flex justify-center lg:justify-start scroll-reveal opacity-0 translate-y-12 transition-all duration-1000 delay-100">
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] md:w-[500px] md:h-[500px] rounded-full bg-[#E8F2F0] z-0" />
               <div className="relative z-10 w-[300px] h-[300px] md:w-[450px] md:h-[450px] rounded-full overflow-hidden border-[12px] border-white shadow-2xl">
-                <img src="https://res.cloudinary.com/dw1ohipim/image/upload/v1789940514/xhtkcpbirwuno06vsjsc.webp" alt="Travellers exploring" className="w-full h-full object-cover" />
+                <img src="https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789940514/xhtkcpbirwuno06vsjsc.webp" alt="Travellers exploring" className="w-full h-full object-cover" />
               </div>
             </div>
 
@@ -164,7 +164,7 @@ export const AboutPage: React.FC = () => {
 
           <div className="lg:col-span-5 scroll-reveal opacity-0 translate-y-12 transition-all duration-1000 delay-300">
             <div className="w-full h-[500px] md:h-[600px] rounded-[2rem] overflow-hidden shadow-2xl relative">
-              <img src="https://res.cloudinary.com/dw1ohipim/image/upload/v1789940162/ws8doeqfv9zvxnqw3h8e.jpg" alt="The Ancient Path team at work" className="w-full h-full object-cover" />
+              <img src="https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789940162/ws8doeqfv9zvxnqw3h8e.jpg" alt="The Ancient Path team at work" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -184,7 +184,7 @@ export const AboutPage: React.FC = () => {
       {/* 6. FINAL CTA */}
       <section className="relative h-[50vh] min-h-[400px] w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://res.cloudinary.com/dw1ohipim/image/upload/v1789939919/hbidmtduthcdtpwzx8ry.avif" alt="Bespoke Travel" className="w-full h-full object-cover brightness-[0.35]" />
+          <img src="https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789939919/hbidmtduthcdtpwzx8ry.avif" alt="Bespoke Travel" className="w-full h-full object-cover brightness-[0.35]" />
         </div>
         <div className="relative z-10 text-center px-4 scroll-reveal opacity-0 translate-y-12 transition-all duration-1000 max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-serif text-white mb-10 leading-tight">
@@ -205,3 +205,4 @@ export const AboutPage: React.FC = () => {
     </div>
   );
 };
+

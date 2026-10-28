@@ -82,10 +82,11 @@ export const ResponsibleTravel = ({ onPlanJourney }: ResponsibleTravelProps) => 
 
           {/* Right Column: Authentic Photography */}
           <div className="lg:col-span-4 relative h-72 sm:h-96 rounded-2xl overflow-hidden shadow-md border border-[#E8D8BD]">
-            <img
+<img
               src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1000&q=85"
               alt="Local Ethiopian guide walking in scenic highlands"
               className="w-full h-full object-cover object-center"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm p-3 rounded-lg border border-[#E8D8BD] text-center">
@@ -104,3 +105,6 @@ export const ResponsibleTravel = ({ onPlanJourney }: ResponsibleTravelProps) => 
     </section>
   );
 };
+
+
+

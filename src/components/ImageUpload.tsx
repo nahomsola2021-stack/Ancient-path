@@ -97,3 +97,4 @@ export function ImageUpload({ label, currentUrl, onUpload, onRemove, folder = 'u
     </div>
   );
 }
+

@@ -112,3 +112,5 @@ export const Introduction = ({ onExploreApproach }: IntroductionProps) => {
     </section>
   );
 };
+
+

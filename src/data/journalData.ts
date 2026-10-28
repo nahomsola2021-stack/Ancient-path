@@ -42,14 +42,14 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
     author: {
       name: 'Yared Tesfaye',
       role: 'Senior Cultural Historian & Expedition Lead',
-      avatar: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1786278172/as7xi2mnhrlbebkhre3u.webp'
+      avatar: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1786278172/as7xi2mnhrlbebkhre3u.webp'
     },
     publishedDate: 'November 14, 2025',
     readTime: '6 min read',
-    coverImage: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1786278172/as7xi2mnhrlbebkhre3u.webp',
+    coverImage: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1786278172/as7xi2mnhrlbebkhre3u.webp',
     gallery: [
-      'https://res.cloudinary.com/dw1ohipim/image/upload/v1779822099/qyixdzyiuzdtchgou8i1.webp',
-      'https://res.cloudinary.com/dw1ohipim/image/upload/v1779822099/qyixdzyiuzdtchgou8i1.webp'
+      'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1779822099/qyixdzyiuzdtchgou8i1.webp',
+      'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1779822099/qyixdzyiuzdtchgou8i1.webp'
     ],
     tags: ['Lalibela', 'UNESCO Heritage', 'Orthodox Faith', 'Architecture', 'Highlands'],
     content: {
@@ -62,7 +62,7 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
             'Unlike European cathedrals built stone upon stone rising toward the heavens, Lalibela’s master craftsmen excavated downward. They chiseled massive trenches into solid red volcanic tuff, isolating monolithic blocks before carving ornate doors, windows, colonnades, barrel vaults, and intricate drainage systems from the interior out.'
           ],
           quote: '“They were not built from the ground up; they were liberated from the heart of the mountain.”',
-          image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1779822099/qyixdzyiuzdtchgou8i1.webp',
+          image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1779822099/qyixdzyiuzdtchgou8i1.webp',
           imageCaption: 'The cruciform roof of Bete Giyorgis flush with the surrounding rock surface.'
         },
         {
@@ -99,11 +99,11 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
     author: {
       name: 'Selamawit Bekele',
       role: 'Culinary Anthropologist & Guide',
-      avatar: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1787826760/c8quno827nlzuo7in9tb.jpg'
+      avatar: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1787826760/c8quno827nlzuo7in9tb.jpg'
     },
     publishedDate: 'December 02, 2025',
     readTime: '5 min read',
-    coverImage: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1787826760/c8quno827nlzuo7in9tb.jpg',
+    coverImage: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1787826760/c8quno827nlzuo7in9tb.jpg',
     tags: ['Coffee', 'Buna Ceremony', 'Culture', 'Gastronomy', 'Addis Ababa'],
     content: {
       introduction: 'According to legend, a 9th-century goat herder named Kaldi in the southwestern highlands of Kaffa noticed his goats dancing with boundless vitality after grazing on bright red berries. Whether truth or myth, Ethiopia is undisputed as the botanical and cultural birthplace of Coffea arabica.',
@@ -115,7 +115,7 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
             'The hostess washes raw green coffee beans before roasting them gently in a shallow, long-handled metal pan over the embers. As the beans darken and release their aromatic oils, the hostess walks the pan around the room, inviting each guest to cup the rich aroma toward their face with a gentle wave of the hand.'
           ],
           quote: '“Buna dabo naw” — an Amharic saying meaning “Coffee is our bread.” It is sustenance for both the body and the community.',
-          image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1787827539/vbvdrtn2rsdmo9yshoya.jpg',
+          image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1787827539/vbvdrtn2rsdmo9yshoya.jpg',
           imageCaption: 'Roasting green arabica beans over glowing embers.'
         },
         {
@@ -147,11 +147,11 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
     author: {
       name: 'Daniel Alemayehu',
       role: 'High-Altitude Wilderness Specialist',
-      avatar: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1784106148/nagiymokhyrtp8vm41ki.jpg'
+      avatar: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1784106148/nagiymokhyrtp8vm41ki.jpg'
     },
     publishedDate: 'January 10, 2026',
     readTime: '7 min read',
-    coverImage: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1787827787/qnsslbibqvypbirf5kli.jpg',
+    coverImage: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1787827787/qnsslbibqvypbirf5kli.jpg',
     tags: ['Simien Mountains', 'Trekking', 'Gelada Baboons', 'Highlands', 'Wildlife'],
     content: {
       introduction: 'Millions of years of volcanic eruptions followed by relentless geological erosion have sculpted the Simien massif into one of the most awe-inspiring mountain landscapes on Earth. Gazing across the precipice at Sankaber or Imet Gogo, jagged spires pierce through billowing sea clouds stretching all the way to the horizon.',
@@ -163,7 +163,7 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
             'Trekking quietly into their midst is a tranquil experience. Because they do not fear humans who approach respectfully with local park scouts, you can sit within meters as mothers groom infants, elders groom each other in synchronized harmony, and youngsters somersault through highland tussocks.'
           ],
           quote: '“Watching sunset over a 1,000-meter drop while hundreds of Geladas chatter softly around you is an experience that stays with you forever.”',
-          image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1784106148/nagiymokhyrtp8vm41ki.jpg',
+          image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1784106148/nagiymokhyrtp8vm41ki.jpg',
           imageCaption: 'Endemic Geladas grazing peacefully along the high Simien escarpment.'
         },
         {
@@ -194,11 +194,11 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
     author: {
       name: 'Yared Tesfaye',
       role: 'Senior Cultural Historian',
-      avatar: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1787829001/vdsdw78hakjuouamvers.jpg'
+      avatar: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1787829001/vdsdw78hakjuouamvers.jpg'
     },
     publishedDate: 'February 08, 2026',
     readTime: '6 min read',
-    coverImage: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1784496024/ywsf1mxm5sdpsb8znls6.jpg',
+    coverImage: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1784496024/ywsf1mxm5sdpsb8znls6.jpg',
     tags: ['Harar', 'UNESCO Walled City', 'Islamic Heritage', 'Eastern Ethiopia', 'Hyena Men'],
     content: {
       introduction: 'Harar feels like nowhere else in the Horn of Africa. Perched on a hilltop in eastern Ethiopia, this historic walled city has stood for a millennium as an independent trading crossroads linking the African interior with the Arabian Peninsula and the Indian Ocean trade routes.',
@@ -243,7 +243,7 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
     },
     publishedDate: 'February 20, 2026',
     readTime: '8 min read',
-    coverImage: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1784491401/gwxhfwpl9c3hn8x1j77e.jpg',
+    coverImage: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1784491401/gwxhfwpl9c3hn8x1j77e.jpg',
     tags: ['Practical Guide', 'Weather', 'Visas', 'Packing', 'Health'],
     content: {
       introduction: 'Planning a trip to Ethiopia is an exciting endeavor that rewards preparation. Because Ethiopia’s geography ranges from mountain peaks at 4,500m to salt depressions below sea level, knowing what to anticipate makes all the difference.',
@@ -281,3 +281,4 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
     relatedDestIds: ['addis-ababa', 'lalibela', 'gondar', 'simien-mountains']
   }
 ];
+

@@ -80,10 +80,11 @@ export const TourModal = ({
       >
         {/* Header Hero Image */}
         <div className="relative h-56 sm:h-72 w-full shrink-0 overflow-hidden group">
-          <img 
+<img 
             src={tour.image} 
             alt={tour.title} 
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-[0.8]"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#173C35] via-black/30 to-black/60" />
           
@@ -205,3 +206,6 @@ export const TourModal = ({
     </div>
   );
 };
+
+
+

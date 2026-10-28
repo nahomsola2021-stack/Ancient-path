@@ -68,3 +68,4 @@ export function useToast(): UseToastReturn {
 
   return { show, hide, ToastComponent };
 }
+

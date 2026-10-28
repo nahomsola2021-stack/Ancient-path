@@ -69,7 +69,7 @@ export const JournalPage: React.FC = () => {
       
       <section className="relative h-[60vh] min-h-[500px] w-full flex items-end pb-16 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="https://res.cloudinary.com/dw1ohipim/image/upload/v1789940701/ddutdctrjuptda8tpfwk.jpg" alt="Ethiopian Coffee Ceremony" className="w-full h-full object-cover animate-slow-zoom brightness-[0.55]" />
+          <img src="https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789940701/ddutdctrjuptda8tpfwk.jpg" alt="Ethiopian Coffee Ceremony" className="w-full h-full object-cover animate-slow-zoom brightness-[0.55]" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
         </div>
         <div className="max-w-[1400px] mx-auto px-4 md:px-8 relative z-10 w-full pt-20">
@@ -180,3 +180,4 @@ export const JournalPage: React.FC = () => {
     </div>
   );
 };
+

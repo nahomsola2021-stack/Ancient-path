@@ -45,22 +45,22 @@ export const HomePage: React.FC<HomePageProps> = ({
 
   // NATURAL KEYWORD INJECTION in the Hero Slider
   const heroSlides = [
-    { image: "https://res.cloudinary.com/dw1ohipim/image/upload/v1789937596/ebenwalotmbgiqszetie.jpg", kicker: "THE NORTHERN CIRCUIT", title: "The Ancient Kingdoms", subtitle: "Discover the historic heart of Ethiopia through rock-hewn churches, royal castles, and dramatic mountain landscapes." },
-    { image: "https://res.cloudinary.com/dw1ohipim/image/upload/v1789937854/qqoecq1zq0gh0ixocyrw.jpg", kicker: "THE OMO VALLEY", title: "Living Traditions", subtitle: "Immerse yourself in vibrant, untouched cultures on our premier African safari tours through the extraordinary tribal valleys of the south." },
-    { image: "https://res.cloudinary.com/dw1ohipim/image/upload/v1789938018/mhnlbosuyl5sfwq5r8jb.jpg", kicker: "SIMIEN MOUNTAINS", title: "The Roof of Africa", subtitle: "Trek through breathtaking escarpments and encounter endemic high-altitude species found nowhere else on earth." }
+    { image: "https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789937596/ebenwalotmbgiqszetie.jpg", kicker: "THE NORTHERN CIRCUIT", title: "The Ancient Kingdoms", subtitle: "Discover the historic heart of Ethiopia through rock-hewn churches, royal castles, and dramatic mountain landscapes." },
+    { image: "https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789937854/qqoecq1zq0gh0ixocyrw.jpg", kicker: "THE OMO VALLEY", title: "Living Traditions", subtitle: "Immerse yourself in vibrant, untouched cultures on our premier African safari tours through the extraordinary tribal valleys of the south." },
+    { image: "https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789938018/mhnlbosuyl5sfwq5r8jb.jpg", kicker: "SIMIEN MOUNTAINS", title: "The Roof of Africa", subtitle: "Trek through breathtaking escarpments and encounter endemic high-altitude species found nowhere else on earth." }
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const discoveryCategories = [
-    { name: 'Mountains', icon: '⛰️', image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1789936924/luss2axnhw8imchwkjnx.jpg' },
-    { name: 'History', icon: '🏛️', image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1789847792/nf8qzfajx1mucoyykiip.jpg' },
-    { name: 'Wildlife', icon: '🦁', image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1789937912/irewwcnxjwy2utnuxqqi.avif' },
-    { name: 'Culture', icon: '🏺', image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1789937754/ctzbwpnlytehkv6zznb5.jpg' }
+    { name: 'Mountains', icon: '⛰️', image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789936924/luss2axnhw8imchwkjnx.jpg' },
+    { name: 'History', icon: '🏛️', image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789847792/nf8qzfajx1mucoyykiip.jpg' },
+    { name: 'Wildlife', icon: '🦁', image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789937912/irewwcnxjwy2utnuxqqi.avif' },
+    { name: 'Culture', icon: '🏺', image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789937754/ctzbwpnlytehkv6zznb5.jpg' }
   ];
 
   const visualStory = [
-    { title: 'ANCIENT HISTORY', image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1789938241/n79pjzdjboazxhpumypb.jpg' },
-    { title: 'WILD LANDSCAPES', image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1789938293/eafsz4kczfgeihwegsmr.jpg' }
+    { title: 'ANCIENT HISTORY', image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789938241/n79pjzdjboazxhpumypb.jpg' },
+    { title: 'WILD LANDSCAPES', image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789938293/eafsz4kczfgeihwegsmr.jpg' }
   ];
 
   const benefits = [
@@ -281,9 +281,9 @@ export const HomePage: React.FC<HomePageProps> = ({
           <h2 className="text-5xl md:text-6xl font-serif text-[#1A1A1A] mb-16 text-center scroll-reveal opacity-0 translate-y-12 transition-all duration-1000">Travel Inspiration</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
-              { title: "7 DAYS IN NORTHERN ETHIOPIA", img: "https://res.cloudinary.com/dw1ohipim/image/upload/v1789939440/osppvgvrh0q4v7tqsint.jpg" },
-              { title: "THE LAND OF THE SIMIEN", img: "https://res.cloudinary.com/dw1ohipim/image/upload/v1789936924/luss2axnhw8imchwkjnx.jpg" },
-              { title: "DISCOVERING THE OMO VALLEY", img: "https://res.cloudinary.com/dw1ohipim/image/upload/v1789842989/eqggz7yvayg8ufaacdju.avif" }
+              { title: "7 DAYS IN NORTHERN ETHIOPIA", img: "https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789939440/osppvgvrh0q4v7tqsint.jpg" },
+              { title: "THE LAND OF THE SIMIEN", img: "https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789936924/luss2axnhw8imchwkjnx.jpg" },
+              { title: "DISCOVERING THE OMO VALLEY", img: "https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789842989/eqggz7yvayg8ufaacdju.avif" }
             ].map((story, idx) => (
               <div key={idx} className="group cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-1000" style={{ transitionDelay: `${idx * 150}ms` }}>
                 <div className="relative h-72 overflow-hidden mb-6 rounded-2xl">
@@ -310,7 +310,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* 9. FINAL BOOKING SECTION */}
       <section className="relative h-[70vh] w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://res.cloudinary.com/dw1ohipim/image/upload/v1789842587/tdxfdqwvdwbuzh3uuus6.jpg" alt="Plan Your Trip" className="w-full h-full object-cover brightness-[0.40]" />
+          <img src="https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789842587/tdxfdqwvdwbuzh3uuus6.jpg" alt="Plan Your Trip" className="w-full h-full object-cover brightness-[0.40]" />
         </div>
         <div className="relative z-10 text-center px-4 scroll-reveal opacity-0 translate-y-12 transition-all duration-1000">
           <span className="text-xs font-bold tracking-[0.3em] text-[#B85C38] block mb-6 uppercase">Begin Your Adventure</span>
@@ -327,3 +327,4 @@ export const HomePage: React.FC<HomePageProps> = ({
     </div>
   );
 };
+

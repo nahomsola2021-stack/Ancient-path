@@ -94,10 +94,11 @@ export const ToursSection = ({
               >
                 {/* Image Container with Badges */}
                 <div className="relative h-56 w-full overflow-hidden bg-[#E8D8BD]/30">
-                  <img
+<img
                     src={tour.image}
                     alt={tour.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
                   />
                   
                   {/* Top Badges */}
@@ -199,3 +200,6 @@ export const ToursSection = ({
     </section>
   );
 };
+
+
+

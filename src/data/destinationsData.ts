@@ -9,7 +9,7 @@ export const DESTINATIONS_DATA: Destination[] = [
     summary: 'The capital brings together Ethiopia’s history, politics, culture, food and everyday life. Where many journeys begin, but it deserves more than a quick stop.',
     fullDescription: 'Addis Ababa is where many journeys begin, but it deserves more than a quick stop. The capital brings together Ethiopia’s history, politics, culture, food and everyday life. Visit museums and historic sites, walk through local neighborhoods, explore markets, enjoy Ethiopian coffee and discover a city that is constantly changing.',
     highlights: ['National Museum & Lucy', 'Mount Entoto', 'Holy Trinity Cathedral', 'Merkato & Shola Markets', 'Traditional Coffee Ceremonies', 'Local Neighborhoods', 'Gastronomic Scene'],
-    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1787780651/wsusxdpkh0zrwseqeovu.webp',
+    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1787780651/wsusxdpkh0zrwseqeovu.webp',
     gallery: [
       'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1000&q=80',
@@ -29,7 +29,7 @@ export const DESTINATIONS_DATA: Destination[] = [
     summary: 'Home to some of Ethiopia’s most extraordinary architectural and spiritual treasures, with eleven monolithic rock-hewn churches carved directly from the earth.',
     fullDescription: 'Lalibela is home to some of Ethiopia’s most extraordinary architectural and spiritual treasures. Its famous rock-hewn churches were carved directly from the earth and remain active places of worship. But Lalibela is more than its churches. The surrounding landscapes, communities and living traditions make the destination worth experiencing slowly.',
     highlights: ['Rock-hewn monolithic churches', 'Church of Saint George (Bete Giyorgis)', 'Ethiopian Orthodox tradition & chants', 'Highland rural communities', 'Asheten Maryam Monastery', 'Sunset over Lasta Mountains'],
-    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1784044760/uaxjuqytkud5kywfxamz.jpg',
+    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1784044760/uaxjuqytkud5kywfxamz.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1000&q=80',
@@ -49,7 +49,7 @@ export const DESTINATIONS_DATA: Destination[] = [
     summary: 'Once the center of Ethiopian imperial power, boasting medieval castles, ornate churches with painted angels, and a lively highland atmosphere.',
     fullDescription: 'Gondar was once the center of Ethiopian imperial power. Its castles, churches and historic sites provide a window into a fascinating period of Ethiopian history. Today, Gondar combines this royal heritage with a lively modern city and access to the Simien Mountains.',
     highlights: ['Fasil Ghebbi (Royal Enclosure)', 'Debre Berhan Selassie Church', 'Fasilides’ Bath', 'Kuskuam Palaces', 'Imperial Ethiopian history', 'Azmari traditional music houses'],
-    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1786286004/zmtnjnikbbfhqz06ea5j.jpg',
+    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1786286004/zmtnjnikbbfhqz06ea5j.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1609873834199-4d6b5e0c52f6?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1000&q=80'
@@ -68,7 +68,7 @@ export const DESTINATIONS_DATA: Destination[] = [
     summary: 'Dramatic cliffs, deep valleys and high plateaus forming the "Roof of Africa", home to endemic gelada monkeys, Walia ibex, and panoramic escarpments.',
     fullDescription: 'The Simien Mountains are among Ethiopia’s most spectacular landscapes. Dramatic cliffs, deep valleys and high plateaus create an environment unlike anywhere else in the country. The mountains are also home to endemic wildlife, including the famous gelada.',
     highlights: ['Endemic Gelada Monkeys grazing in troops', 'Jinbar Waterfall & 500m gorge', 'Ras Dejen (Ethiopia’s highest peak)', 'Highland mountain trekking', 'Dramatic escarpments and cloud forests'],
-    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1784105008/im1uicc6wrntebbhqmpt.jpg',
+    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1784105008/im1uicc6wrntebbhqmpt.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1000&q=80'
@@ -87,7 +87,7 @@ export const DESTINATIONS_DATA: Destination[] = [
     summary: 'A palm-lined tropical city on the shores of Lake Tana, the source of the Blue Nile, dotted with century-old island monasteries and serene boat journeys.',
     fullDescription: 'Bahir Dar sits on the shores of Lake Tana, Ethiopia’s largest lake. The lake’s islands and shores are home to historic monasteries, communities and landscapes that have played an important role in Ethiopian history. A boat journey across Lake Tana offers a slower and more peaceful side of Ethiopia.',
     highlights: ['Lake Tana island monasteries (Ura Kidane Mehret)', 'Blue Nile Falls (Tis Abay)', 'Traditional papyrus tankwa boats', 'Pelican and waterbird watching', 'Lakeside sunset promenades'],
-    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1786277684/ejs4hjczvizttiqkkvcm.jpg',
+    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1786277684/ejs4hjczvizttiqkkvcm.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&fit=crop&w=1000&q=80'
@@ -106,7 +106,7 @@ export const DESTINATIONS_DATA: Destination[] = [
     summary: 'A pristine wilderness of afro-alpine plateaus, misty Harenna cloud forest, and the last stronghold of the rare Ethiopian Wolf and Mountain Nyala.',
     fullDescription: 'The Bale Mountains offer some of Ethiopia’s most beautiful highland landscapes and important wildlife habitats. Open plateaus, forests, valleys and volcanic landscapes create an extraordinary environment for exploration. It is a destination for travelers who enjoy nature, wildlife, photography and walking.',
     highlights: ['Sanetti Plateau (4,000m afro-alpine expanse)', 'Rare Ethiopian Wolf tracking', 'Harenna Cloud Forest & wild coffee', 'Mountain Nyala and Menelik’s Bushbuck', 'Tullu Dimtu summit'],
-    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1784492255/a3eewtmcpuy861vaemtj.jpg',
+    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1784492255/a3eewtmcpuy861vaemtj.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80'
@@ -125,7 +125,7 @@ export const DESTINATIONS_DATA: Destination[] = [
     summary: 'Gateway to the Great Rift Valley lakes of Chamo and Abaya, the bamboo beehive huts of the Dorze highlands, and lush Nechisar National Park.',
     fullDescription: 'Arba Minch is a gateway to southern Ethiopia and the landscapes of the Rift Valley. With lakes, forests, mountains and nearby communities, the area offers a completely different perspective from the northern highlands.',
     highlights: ['Lake Chamo boat safari & giant Nile crocodiles', 'Dorze highland village & weaving culture', 'Bridge of God between Abaya and Chamo', 'Nechisar National Park plains', 'Scenic banana and fruit orchards'],
-    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1787781174/mavbqpbw9hmoghvvxmn1.jpg',
+    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1787781174/mavbqpbw9hmoghvvxmn1.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=80'
@@ -144,7 +144,7 @@ export const DESTINATIONS_DATA: Destination[] = [
     summary: 'A cradle of human diversity where age-old pastoral traditions, intricate body artistry, and communal ways of life thrive along the Omo River.',
     fullDescription: 'The Omo Valley is one of Ethiopia’s most culturally diverse regions. Travel here is about meeting people, learning about different traditions and understanding communities within the context of their environment and way of life. We approach cultural encounters with respect and care, recognizing that communities are not tourist attractions—they are people’s homes and lives.',
     highlights: ['Hamar, Mursi, Karo & Dassanech communities', 'Weekly tribal markets (Key Afer, Dimeka)', 'Traditional pottery & beadwork', 'Respectful, unhurried cultural immersion', 'Sunset over the Omo River'],
-    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1784491632/dwsvrs4uaemasr1zuvcn.jpg',
+    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1784491632/dwsvrs4uaemasr1zuvcn.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1528164344705-475426879c0d?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=80'
@@ -163,7 +163,7 @@ export const DESTINATIONS_DATA: Destination[] = [
     summary: 'The holy walled city with 368 winding alleyways, colorful Harari heritage houses, fragrant spice bazaars, and the centuries-old hyena feeding tradition.',
     fullDescription: 'Harar is one of Ethiopia’s most distinctive historic cities. Behind its ancient walls are narrow streets, colorful houses, traditional markets and a rich cultural heritage shaped by centuries of trade and exchange. Harar offers a very different experience from the northern highlands and is particularly rewarding for travelers interested in history, culture and photography.',
     highlights: ['Jugol Walled City (UNESCO)', 'Nightly Hyena Men feeding ritual', 'Arthur Rimbaud Cultural Center', 'Traditional Harari Gey Gar houses', 'Spice markets and coffee mills'],
-    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1784496024/ywsf1mxm5sdpsb8znls6.jpg',
+    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1784496024/ywsf1mxm5sdpsb8znls6.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1584646098378-0874589d76b1?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1000&q=80'
@@ -182,7 +182,7 @@ export const DESTINATIONS_DATA: Destination[] = [
     summary: 'A dramatic, otherworldly landscape of active volcanoes, glowing lava lakes, vast salt pans, and nomadic pastoralists living in the geological Rift.',
     fullDescription: 'The Afar region reveals another side of the country—vast, dry landscapes, volcanic terrain and communities whose lives have long been shaped by one of Ethiopia’s most challenging environments. It is a destination for travelers looking for dramatic scenery and a deeper sense of Ethiopia’s geographic and cultural diversity.',
     highlights: ['Erta Ale active shield volcano', 'Dallol hydrothermal sulfur terraces', 'Lake Assal salt mining & camel caravans', 'Afar nomadic pastoralist culture', 'Great Rift Valley tectonic faults'],
-    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1787781329/be3eg4w88o9ajmem6nvn.jpg',
+    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1787781329/be3eg4w88o9ajmem6nvn.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1000&q=80'
@@ -194,3 +194,4 @@ export const DESTINATIONS_DATA: Destination[] = [
     connectedTourIds: ['rift-to-harar']
   }
 ];
+

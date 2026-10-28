@@ -27,10 +27,11 @@ export const DestinationDetailModal = ({
       >
         {/* Top Hero Image Header */}
         <div className="relative h-64 sm:h-80 w-full shrink-0 overflow-hidden">
-          <img 
+<img 
             src={destination.image} 
             alt={destination.name} 
             className="w-full h-full object-cover brightness-[0.75]"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#173C35] via-black/30 to-black/60" />
           
@@ -130,10 +131,11 @@ export const DestinationDetailModal = ({
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {destination.gallery.map((imgUrl, gIdx) => (
                   <div key={gIdx} className="h-32 sm:h-40 rounded-xl overflow-hidden border border-[#E8D8BD] shadow-sm">
-                    <img 
+<img 
                       src={imgUrl} 
                       alt={`${destination.name} perspective ${gIdx + 1}`}
                       className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                      loading="lazy"
                     />
                   </div>
                 ))}
@@ -220,3 +222,6 @@ export const DestinationDetailModal = ({
     </div>
   );
 };
+
+
+

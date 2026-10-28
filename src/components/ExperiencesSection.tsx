@@ -65,10 +65,11 @@ export const ExperiencesSection = ({ onPlanWithStyle }: ExperiencesSectionProps)
               >
                 {/* Image */}
                 <div className="relative h-48 w-full overflow-hidden bg-[#E8D8BD]/30">
-                  <img
+<img
                     src={exp.image}
                     alt={exp.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
                   />
                   
                   {/* Icon badge */}
@@ -158,3 +159,6 @@ export const ExperiencesSection = ({ onPlanWithStyle }: ExperiencesSectionProps)
     </section>
   );
 };
+
+
+

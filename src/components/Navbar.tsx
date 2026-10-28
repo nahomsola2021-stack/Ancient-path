@@ -81,9 +81,10 @@ export const Navbar = ({
                 isTransparent 
                   ? 'h-20 lg:h-[110px] drop-shadow-[0_10px_20px_rgba(0,0,0,0.6)] translate-y-6 lg:translate-y-8'
                   : 'h-10 lg:h-12 drop-shadow-none translate-y-0'
-              }`}
-            />
-          </Link>
+}`}
+                loading="lazy"
+              />
+            </Link>
 
           {/* CENTERED DESKTOP NAVIGATION */}
           <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
@@ -210,3 +211,5 @@ export const Navbar = ({
     </>
   );
 };
+
+

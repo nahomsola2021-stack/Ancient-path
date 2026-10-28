@@ -74,7 +74,7 @@ export const DestinationsPage: React.FC = () => {
       <section className="relative h-[60vh] min-h-[500px] w-full flex items-end pb-16 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://res.cloudinary.com/dw1ohipim/image/upload/v1789940061/wd6vg6ywq9gv7p6nh25c.jpg" 
+            src="https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789940061/wd6vg6ywq9gv7p6nh25c.jpg" 
             alt="Ethiopian Highlands" 
             className="w-full h-full object-cover animate-slow-zoom brightness-[0.55]"
           />
@@ -209,10 +209,11 @@ export const DestinationsPage: React.FC = () => {
       {/* BESPOKE BANNER */}
       <section className="relative h-[40vh] md:h-[50vh] w-full flex items-center justify-center overflow-hidden mt-10">
         <div className="absolute inset-0">
-          <img 
-            src="https://res.cloudinary.com/dw1ohipim/image/upload/v1789838174/qetz4xx1wcbtfhemlwup.webp" 
+<img 
+            src="https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789838174/qetz4xx1wcbtfhemlwup.webp" 
             alt="Bespoke Travel" 
             className="w-full h-full object-cover brightness-[0.35]"
+            loading="lazy"
           />
         </div>
         <div className="relative z-10 text-center px-4 scroll-reveal opacity-0 translate-y-12 transition-all duration-1000 max-w-3xl">
@@ -236,3 +237,4 @@ export const DestinationsPage: React.FC = () => {
     </div>
   );
 };
+

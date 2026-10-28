@@ -12,7 +12,7 @@ export const TOURS_DATA: TourPackage[] = [
     overview: `Travel through the heart of Ethiopia's northern highlands, where ancient kingdoms, remarkable churches, mountain landscapes and living traditions come together.
 Begin in Addis Ababa before flying north to Lalibela and its extraordinary rock-hewn churches. Continue to Gondar, once the capital of the Ethiopian empire, then spend time among the dramatic landscapes of the Simien Mountains.
 Your journey ends around Lake Tana and Bahir Dar, where ancient monasteries and lakeside communities offer another perspective on Ethiopia's long history.`,
-    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1784044758/ohuohsbdy66wnnbgc6zw.jpg',
+    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1784044758/ohuohsbdy66wnnbgc6zw.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1609873834199-4d6b5e0c52f6?auto=format&fit=crop&w=1000&q=80',
@@ -182,7 +182,7 @@ Your journey ends around Lake Tana and Bahir Dar, where ancient monasteries and 
     overview: `Travel south from Addis Ababa through some of Ethiopia's most varied landscapes.
 This journey combines the lakes and volcanic landscapes of the Rift Valley with the highlands of Bale and the cultural diversity of southern Ethiopia.
 There is time for nature, wildlife and local encounters without turning the journey into a race from one destination to the next.`,
-    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1786277685/koljczs1kdgfy1myq0qq.jpg',
+    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1786277685/koljczs1kdgfy1myq0qq.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80',
@@ -252,7 +252,7 @@ There is time for nature, wildlife and local encounters without turning the jour
     overview: `Discover an eastern Ethiopia that feels very different from the northern highlands.
 Travel through the Rift Valley toward the landscapes of Afar, then continue to Dire Dawa and the ancient walled city of Harar.
 This is a journey of changing landscapes, cultures and histories—from volcanic terrain and dry lowlands to one of Ethiopia's most distinctive historic cities.`,
-    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1784496024/ywsf1mxm5sdpsb8znls6.jpg',
+    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1784496024/ywsf1mxm5sdpsb8znls6.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1584646098378-0874589d76b1?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1000&q=80',
@@ -319,7 +319,7 @@ This is a journey of changing landscapes, cultures and histories—from volcanic
     overview: `Addis Ababa is more than a starting point.
 It is where ancient traditions meet a rapidly changing Africa. It is a city of museums, churches, markets, coffee houses, restaurants, neighborhoods and people from every corner of Ethiopia.
 Choose one day for the essential highlights, or stay longer and experience the city at a deeper pace.`,
-    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1784498995/cnvov2obdlcjwmjako5t.jpg',
+    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1784498995/cnvov2obdlcjwmjako5t.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1000&q=80'
@@ -385,7 +385,7 @@ Choose one day for the essential highlights, or stay longer and experience the c
     summary: 'An immersive encounter with the eleven world-famous rock-hewn monolithic churches and the living spirituality of the highland community.',
     overview: `Few places in Ethiopia leave such a lasting impression as Lalibela.
 The famous churches are only part of the experience. The deeper story is found in the people, faith, traditions and landscapes surrounding them.`,
-    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1784495589/aoqqqn9eer5tndnloz9b.jpg',
+    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1784495589/aoqqqn9eer5tndnloz9b.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1000&q=80'
@@ -455,7 +455,7 @@ The famous churches are only part of the experience. The deeper story is found i
     summary: 'A short escape into southern Ethiopia, traveling through Great Rift Valley lakes, the Dorze highland village, and boat safaris on Lake Chamo.',
     overview: `A short journey into southern Ethiopia, beginning with the landscapes of the Rift Valley and continuing toward Arba Minch.
 This is an ideal option when you want to leave Addis Ababa behind and experience a different side of the country without committing to a long southern expedition.`,
-    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1784106274/nlvqbudc71mxacel7y6y.jpg',
+    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1784106274/nlvqbudc71mxacel7y6y.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80'
@@ -527,7 +527,7 @@ This is an ideal option when you want to leave Addis Ababa behind and experience
     overview: `A deep dive into the extraordinary cultural mosaic of southern Ethiopia.
 Journey into the Lower Omo Valley to meet indigenous communities who have preserved their ancient ways of life for millennia.
 From the lip-plates of the Mursi to the vibrant body painting of the Karo and the famous Bull Jumping ceremonies of the Hamer, this expedition offers an unparalleled anthropological experience.`,
-    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1789939716/b3jegopdotjurptpxtsr.jpg',
+    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789939716/b3jegopdotjurptpxtsr.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1528164344705-475426879c0d?auto=format&fit=crop&w=1000&q=80'
@@ -580,7 +580,7 @@ From the lip-plates of the Mursi to the vibrant body painting of the Karo and th
     summary: 'Venture into one of the most extreme and otherworldly landscapes on Earth, featuring active volcanoes and neon sulfur springs.',
     overview: `An expedition into one of the most extreme, remote, and visually stunning landscapes on Earth.
 The Danakil Depression sits more than 100 meters below sea level. Witness the bubbling lava lake of Erta Ale at night, walk across the alien-like neon sulfur springs of Dallol, and watch endless camel caravans crossing the vast salt flats.`,
-    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1789847728/kl3tame6jps5xw3zqsau.jpg',
+    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789847728/kl3tame6jps5xw3zqsau.jpg',
     gallery: [
       'https://images.unsplash.com/photo-1521255562725-b8830b5030ae?auto=format&fit=crop&w=1000&q=80'
     ],
@@ -628,7 +628,7 @@ The Danakil Depression sits more than 100 meters below sea level. Witness the bu
     summary: 'Trek through the afro-alpine moorlands and mystical Harenna Forest to spot the rare Ethiopian Wolf and endemic highland bird species.',
     overview: `A pure wilderness escape into the largest tract of afro-alpine habitat in Africa.
 The Bale Mountains offer some of the best wildlife viewing in Ethiopia. Ascend the spectacular Sanetti Plateau to search for the critically endangered Ethiopian Wolf, then descend into the mist-shrouded, moss-draped Harenna Cloud Forest.`,
-    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/v1789937912/irewwcnxjwy2utnuxqqi.avif',
+    image: 'https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789937912/irewwcnxjwy2utnuxqqi.avif',
     gallery: [
       'https://images.unsplash.com/photo-1627916962323-eb34d2847582?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80'

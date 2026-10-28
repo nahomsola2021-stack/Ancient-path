@@ -109,7 +109,7 @@ export const ToursPage: React.FC<ToursPageProps> = ({
       <section className="relative h-[50vh] min-h-[400px] w-full flex items-end pb-16 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://res.cloudinary.com/dw1ohipim/image/upload/v1789939661/skeaidwprmagzcledvkn.jpg" 
+            src="https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789939661/skeaidwprmagzcledvkn.jpg" 
             alt="Ethiopian Landscape" 
             className="w-full h-full object-cover brightness-[0.55] animate-slow-zoom"
           />
@@ -284,3 +284,4 @@ export const ToursPage: React.FC<ToursPageProps> = ({
     </div>
   );
 };
+
