@@ -61,8 +61,8 @@ export const ContactSection = () => {
                   <Mail className="w-4 h-4 text-[#B85C38] shrink-0 mt-1" />
                   <div>
                     <strong className="text-[#173C35] block mb-0.5">Email Inquiries</strong>
-                    <a href="mailto:info@ancientpathethiopia.com" className="text-[#B85C38] hover:underline font-medium">
-                      info@ancientpathethiopia.com
+                    <a href="mailto:abenezer800@gmail.com" className="text-[#B85C38] hover:underline font-medium">
+                      abenezer800@gmail.com
                     </a>
                   </div>
                 </div>
@@ -71,7 +71,7 @@ export const ContactSection = () => {
                   <Phone className="w-4 h-4 text-[#B85C38] shrink-0 mt-1" />
                   <div>
                     <strong className="text-[#173C35] block mb-0.5">Telephone</strong>
-                    <span className="text-[#252525]/80">+251 11 123 4567 / +251 91 123 4567</span>
+                    <span className="text-[#252525]/80">+251 91 204 1252 (Mobile/WA)</span>
                   </div>
                 </div>
 
@@ -87,7 +87,7 @@ export const ContactSection = () => {
               {/* Direct WhatsApp CTA */}
               <div className="pt-4 border-t border-[#E8D8BD]/60">
                 <a
-                  href="https://wa.me/251911234567"
+                  href="https://wa.me/251912041252"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs uppercase tracking-wider rounded-xl flex items-center justify-center gap-2 shadow transition-transform active:scale-95"

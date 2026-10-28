@@ -195,7 +195,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
                 <button onClick={() => navigate('/book', { state: { destinationId: destination.id } })} className="w-full py-4 border border-gray-200 text-black text-xs font-bold uppercase tracking-widest hover:border-black transition-colors flex items-center justify-center gap-2 mb-4">
                   <Sparkles className="w-3.5 h-3.5" /><span>Book Custom Journey</span>
                 </button>
-                <a href={`https://wa.me/251911234567?text=Hello%2C%20I%20am%20interested%20in%20visiting%20${encodeURIComponent(destination.name)}.`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-semibold text-gray-500 hover:text-black transition-colors">
+                <a href={`https://wa.me/251912041252?text=Hello%2C%20I%20am%20interested%20in%20visiting%20${encodeURIComponent(destination.name)}.`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-semibold text-gray-500 hover:text-black transition-colors">
                   <MessageSquare className="w-3.5 h-3.5 text-[#25D366] fill-current" /><span>WhatsApp direct chat (+251)</span>
                 </a>
               </div>

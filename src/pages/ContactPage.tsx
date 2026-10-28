@@ -50,7 +50,7 @@ export const ContactPage: React.FC = () => {
 
   const handleWhatsAppClick = () => {
     const text = encodeURIComponent("Hello Ancient Path team, I would like to inquire about planning a trip to Ethiopia.");
-    window.open(`https://wa.me/251911234567?text=${text}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://wa.me/251912041252?text=${text}`, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -167,15 +167,15 @@ export const ContactPage: React.FC = () => {
                 <Phone className="w-7 h-7 text-[#B85C38] shrink-0 mt-1" strokeWidth={1.5} />
                 <div>
                   <span className="font-bold text-black uppercase tracking-widest text-sm block mb-2">Direct Contact</span>
-                  <a href="tel:+251911234567" className="text-lg text-gray-500 hover:text-[#B85C38] transition-colors block mb-1 font-light">+251 911 234 567 (Mobile/WA)</a>
-                  <a href="tel:+251116789012" className="text-lg text-gray-500 hover:text-[#B85C38] transition-colors block font-light">+251 116 789 012 (Landline)</a>
+                  <a href="tel:+251912041252" className="text-lg text-gray-500 hover:text-[#B85C38] transition-colors block mb-1 font-light">+251 91 204 1252 (Mobile/WA)</a>
+                  
                 </div>
               </div>
               <div className="flex items-start gap-6">
                 <Mail className="w-7 h-7 text-[#B85C38] shrink-0 mt-1" strokeWidth={1.5} />
                 <div>
                   <span className="font-bold text-black uppercase tracking-widest text-sm block mb-2">Email</span>
-                  <a href="mailto:journeys@ancientpathethiopia.com" className="text-lg text-gray-500 hover:text-[#B85C38] transition-colors font-light">journeys@ancientpathethiopia.com</a>
+                  <a href="mailto:abenezer800@gmail.com" className="text-lg text-gray-500 hover:text-[#B85C38] transition-colors font-light">abenezer800@gmail.com</a>
                 </div>
               </div>
               <div className="flex items-start gap-6">

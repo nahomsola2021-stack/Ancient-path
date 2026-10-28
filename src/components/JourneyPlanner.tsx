@@ -624,7 +624,7 @@ export const JourneyPlanner = ({ initialTour, initialDestId }: JourneyPlannerPro
 
               <div className="flex flex-wrap items-center justify-center gap-3 pt-4">
                 <button
-                  onClick={() => window.open(`https://wa.me/251911234567?text=Hello%20Ancient%20Path%20Ethiopia,%20I%20just%20submitted%20a%20custom%20trip%20inquiry%20for%20${formData.durationDays}%20days.`, '_blank')}
+                  onClick={() => window.open(`https://wa.me/251912041252?text=Hello%20Ancient%20Path%20Ethiopia,%20I%20just%20submitted%20a%20custom%20trip%20inquiry%20for%20${formData.durationDays}%20days.`, '_blank')}
                   className="px-5 py-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs uppercase tracking-wider rounded-lg flex items-center gap-2 shadow"
                 >
                   <Phone className="w-4 h-4" />

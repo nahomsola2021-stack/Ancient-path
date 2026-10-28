@@ -199,10 +199,10 @@ export const Navbar = ({
 
           <div className="pt-8 border-t border-[#26534b] text-xs text-[#E8D8BD]/80 space-y-2">
             <div className="flex items-center gap-2">
-              <Mail className="w-4 h-4 text-[#B8955A]" /> <span>journeys@ancientpathethiopia.com</span>
+              <Mail className="w-4 h-4 text-[#B8955A]" /> <span>abenezer800@gmail.com</span>
             </div>
             <div className="flex items-center gap-2">
-              <Phone className="w-4 h-4 text-[#B8955A]" /> <span>Addis Ababa, Ethiopia • +251 911 234 567</span>
+              <Phone className="w-4 h-4 text-[#B8955A]" /> <span>Addis Ababa, Ethiopia • +251 91 204 1252</span>
             </div>
           </div>
         </div>

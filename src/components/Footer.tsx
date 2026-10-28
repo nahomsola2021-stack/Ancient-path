@@ -63,14 +63,14 @@ export const Footer = () => {
               </li>
               <li className="flex items-start gap-2.5">
                 <Mail className="w-4 h-4 text-[#B8955A] shrink-0" />
-                <a href="mailto:journeys@ancientpathethiopia.com" className="hover:text-white transition-colors break-words">
-                  journeys@ancientpath...
+                <a href="mailto:abenezer800@gmail.com" className="hover:text-white transition-colors break-words">
+                  abenezer800@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-2.5">
                 <Phone className="w-4 h-4 text-[#B8955A] shrink-0" />
-                <a href="tel:+251911234567" className="hover:text-white transition-colors">
-                  +251 911 234 567
+                <a href="tel:+251912041252" className="hover:text-white transition-colors">
+                  +251 91 204 1252
                 </a>
               </li>
             </ul>
@@ -88,7 +88,7 @@ export const Footer = () => {
               <a href="#" className="p-2.5 rounded-full bg-[#122e29] hover:bg-[#B85C38] hover:text-white transition-colors" title="Facebook">
                 <Facebook className="w-4 h-4" />
               </a>
-              <a href="https://wa.me/251911234567" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-full bg-[#122e29] hover:bg-[#B85C38] hover:text-white transition-colors" title="WhatsApp">
+              <a href="https://wa.me/251912041252" target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-full bg-[#122e29] hover:bg-[#B85C38] hover:text-white transition-colors" title="WhatsApp">
                 <MessageSquare className="w-4 h-4" />
               </a>
             </div>
