@@ -67,8 +67,9 @@ export function BookingDetailModal({ booking, onClose, onAccept, onReject, onDel
               <Calendar className="w-4 h-4" /> Requested for: {travelDate}
             </p>
           </div>
-          <button
+<button
             onClick={onClose}
+            aria-label="Close booking details"
             className="p-2 bg-white rounded-full shadow-sm text-slate-400 hover:text-emerald-600 transition-colors border border-slate-100"
           >
             <X className="w-5 h-5" />

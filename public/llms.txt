@@ -1,0 +1,10 @@
+# Ancient Path Ethiopia
+> Premier Ethiopian Travel Agency based in Addis Ababa
+
+Ancient Path Ethiopia offers bespoke historical expeditions, cultural journeys, and African safari tours across the Horn of Africa.
+
+## Site Structure
+- [Tours](/tours): Curated travel packages and itineraries.
+- [Destinations](/destinations): Regional guides including the Danakil Depression, Omo Valley, and Northern Highlands.
+- [Journal](/journal): Travel field notes, cultural histories, and travel advice.
+- [Contact](/contact): Direct contact information for our Addis Ababa concierge desk.

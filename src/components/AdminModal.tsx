@@ -173,7 +173,7 @@ export const AdminTourModal: React.FC<AdminTourModalProps> = ({
             </h2>
             <p className="text-sm text-gray-500 mt-1">Configure itinerary details, pricing, and media.</p>
           </div>
-          <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-400 hover:text-black">
+          <button onClick={onClose} aria-label="Close modal" className="p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-400 hover:text-black">
             <X className="w-6 h-6" />
           </button>
         </div>
@@ -260,7 +260,7 @@ export const AdminTourModal: React.FC<AdminTourModalProps> = ({
                 {formData.itinerary.map((day: any, index: number) => (
                   <div key={index} className="bg-white border border-gray-200 p-6 rounded-2xl relative shadow-sm group">
                     <div className="absolute top-4 right-4">
-                      <button onClick={() => handleRemoveDay(index)} className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-full transition-colors">
+                      <button onClick={() => handleRemoveDay(index)} aria-label={`Remove Day ${day.day}`} className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-full transition-colors">
                         <Trash2 className="w-4 h-4" />
                       </button>
                     </div>

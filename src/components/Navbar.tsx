@@ -118,9 +118,10 @@ export const Navbar = ({
           {/* RIGHT ALIGNED ACTIONS */}
           <div className="absolute right-4 lg:right-8 flex items-center gap-2 sm:gap-4">
             
-            <button
+<button
               id="search-toggle-btn"
               onClick={onOpenSearch}
+              aria-label="Open search"
               className="p-2.5 rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-colors focus:outline-none cursor-pointer"
             >
               <Search className="w-4 h-4" />
@@ -129,6 +130,7 @@ export const Navbar = ({
             <button
               id="wishlist-toggle-btn"
               onClick={onOpenWishlist}
+              aria-label="Open wishlist"
               className="p-2.5 rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-colors relative focus:outline-none cursor-pointer"
             >
               <Heart className="w-4 h-4" />
@@ -143,6 +145,7 @@ export const Navbar = ({
             <button
               id="nav-cta-plan-journey"
               onClick={onOpenBooking}
+              aria-label="Plan your journey"
               className="hidden sm:inline-flex items-center gap-2 bg-[#B85C38] hover:bg-[#a04e2e] text-white text-xs uppercase tracking-widest font-bold px-6 py-2.5 rounded-lg shadow-lg hover:shadow-xl transition-all"
             >
               <span>Plan Journey</span>
@@ -152,6 +155,8 @@ export const Navbar = ({
             <button
               id="mobile-menu-toggle-btn"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Close mobile menu" : "Open mobile menu"}
+              aria-expanded={mobileMenuOpen}
               className="lg:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors focus:outline-none cursor-pointer"
             >
               {mobileMenuOpen ? <X className="w-6 h-6 text-[#B8955A]" /> : <Menu className="w-6 h-6" />}

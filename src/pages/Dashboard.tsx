@@ -278,7 +278,7 @@ export function Dashboard() {
           {/* HEADER (Responsive) */}
           <header className="h-20 lg:h-28 px-6 lg:px-12 flex items-center justify-between bg-[#F2F6F4]/90 backdrop-blur-xl border-b border-emerald-900/5 shrink-0">
             <div className="flex items-center gap-4 w-full lg:w-auto">
-              <button className="lg:hidden p-2 -ml-2 text-emerald-900 hover:bg-emerald-100 rounded-lg transition-colors" onClick={() => setIsMobileMenuOpen(true)}>
+<button className="lg:hidden p-2 -ml-2 text-emerald-900 hover:bg-emerald-100 rounded-lg transition-colors" onClick={() => setIsMobileMenuOpen(true)} aria-label="Open mobile menu">
                 <Menu className="w-6 h-6" />
               </button>
               
@@ -296,7 +296,7 @@ export function Dashboard() {
             </div>
 
             <div className="hidden lg:flex items-center gap-6">
-              <button className="relative p-2.5 text-emerald-900/40 hover:text-emerald-600 rounded-full hover:bg-emerald-500/10">
+<button aria-label="Notifications" className="relative p-2.5 text-emerald-900/40 hover:text-emerald-600 rounded-full hover:bg-emerald-500/10">
                 <Bell className="w-5 h-5" />
                 {bookings.filter(b => b.status === 'pending').length > 0 && <span className="absolute top-2.5 right-2.5 w-2 h-2 bg-red-500 rounded-full border-2 border-[#F2F6F4]"></span>}
               </button>
@@ -475,9 +475,9 @@ export function Dashboard() {
                               </td>
                               <td className="px-6 lg:px-8 py-4 lg:py-5 text-right">
                                 <div className="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                                  {booking.status !== 'confirmed' && <button onClick={(e) => { e.stopPropagation(); handleAccept(booking.id); }} className="p-2 text-emerald-600 bg-emerald-50 hover:bg-emerald-100 rounded-lg transition-colors"><Check className="w-4 h-4" /></button>}
-                                  {booking.status !== 'cancelled' && <button onClick={(e) => { e.stopPropagation(); handleReject(booking.id); }} className="p-2 text-amber-600 bg-amber-50 hover:bg-amber-100 rounded-lg transition-colors"><X className="w-4 h-4" /></button>}
-                                  <button onClick={(e) => { e.stopPropagation(); handleDeleteBooking(booking.id); }} className="p-2 text-red-600 bg-red-50 hover:bg-red-100 rounded-lg transition-colors"><Trash2 className="w-4 h-4" /></button>
+{booking.status !== 'confirmed' && <button onClick={(e) => { e.stopPropagation(); handleAccept(booking.id); }} aria-label="Accept booking" className="p-2 text-emerald-600 bg-emerald-50 hover:bg-emerald-100 rounded-lg transition-colors"><Check className="w-4 h-4" /></button>}
+                                  {booking.status !== 'cancelled' && <button onClick={(e) => { e.stopPropagation(); handleReject(booking.id); }} aria-label="Reject booking" className="p-2 text-amber-600 bg-amber-50 hover:bg-amber-100 rounded-lg transition-colors"><X className="w-4 h-4" /></button>}
+                                  <button onClick={(e) => { e.stopPropagation(); handleDeleteBooking(booking.id); }} aria-label="Delete booking" className="p-2 text-red-600 bg-red-50 hover:bg-red-100 rounded-lg transition-colors"><Trash2 className="w-4 h-4" /></button>
                                 </div>
                               </td>
                             </tr>
@@ -501,8 +501,8 @@ export function Dashboard() {
                               </td>
                               <td className="px-6 lg:px-8 py-4 lg:py-5 text-right">
                                 <div className="flex items-center justify-end gap-2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity">
-                                  <button onClick={() => handleOpenEditor('edit', item)} className="p-2 text-emerald-600 hover:bg-emerald-100 rounded-lg transition-colors"><Edit3 className="w-4 h-4" /></button>
-                                  <button onClick={() => handleDeleteItem(item.id, activeTab)} className="p-2 text-red-500 hover:bg-red-100 rounded-lg transition-colors"><Trash2 className="w-4 h-4" /></button>
+<button onClick={() => handleOpenEditor('edit', item)} aria-label="Edit item" className="p-2 text-emerald-600 hover:bg-emerald-100 rounded-lg transition-colors"><Edit3 className="w-4 h-4" /></button>
+                                  <button onClick={() => handleDeleteItem(item.id, activeTab)} aria-label="Delete item" className="p-2 text-red-500 hover:bg-red-100 rounded-lg transition-colors"><Trash2 className="w-4 h-4" /></button>
                                 </div>
                               </td>
                             </tr>
@@ -517,8 +517,8 @@ export function Dashboard() {
                       <div className="px-6 lg:px-8 py-4 border-t border-emerald-900/5 bg-[#F2F6F4]/40 flex items-center justify-between">
                         <span className="text-[11px] font-bold text-emerald-900/40 uppercase tracking-widest">Page {currentPage} of {totalPages}</span>
                         <div className="flex gap-2">
-                          <button onClick={() => setCurrentPage(p => Math.max(1, p - 1))} disabled={currentPage === 1} className="p-2 rounded-xl bg-white border border-gray-200 hover:bg-gray-50 disabled:opacity-50 transition-colors"><ChevronLeft className="w-4 h-4" /></button>
-                          <button onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))} disabled={currentPage === totalPages} className="p-2 rounded-xl bg-white border border-gray-200 hover:bg-gray-50 disabled:opacity-50 transition-colors"><ChevronRight className="w-4 h-4" /></button>
+<button onClick={() => setCurrentPage(p => Math.max(1, p - 1))} disabled={currentPage === 1} aria-label="Previous page" className="p-2 rounded-xl bg-white border border-gray-200 hover:bg-gray-50 disabled:opacity-50 transition-colors"><ChevronLeft className="w-4 h-4" /></button>
+                          <button onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))} disabled={currentPage === totalPages} aria-label="Next page" className="p-2 rounded-xl bg-white border border-gray-200 hover:bg-gray-50 disabled:opacity-50 transition-colors"><ChevronRight className="w-4 h-4" /></button>
                         </div>
                       </div>
                     )}

@@ -131,8 +131,8 @@ export const HomePage: React.FC<HomePageProps> = ({
         <div className="absolute bottom-10 left-0 w-full z-20">
           <div className="max-w-[1400px] mx-auto px-4 md:px-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="flex items-center gap-3">
-              <button onClick={prevSlide} className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors backdrop-blur-md"><ChevronLeft className="w-5 h-5" /></button>
-              <button onClick={nextSlide} className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors backdrop-blur-md"><ChevronRight className="w-5 h-5" /></button>
+<button onClick={prevSlide} aria-label="Previous slide" className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors backdrop-blur-md"><ChevronLeft className="w-5 h-5" /></button>
+              <button onClick={nextSlide} aria-label="Next slide" className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors backdrop-blur-md"><ChevronRight className="w-5 h-5" /></button>
             </div>
             <div className="flex items-center gap-6 w-full md:w-auto">
               <span className="text-white font-serif text-lg">0{currentSlide + 1} <span className="text-white/40 text-sm mx-1">/</span> <span className="text-white/40 text-sm">0{heroSlides.length}</span></span>
