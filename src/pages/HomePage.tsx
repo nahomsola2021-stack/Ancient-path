@@ -32,11 +32,11 @@ export const HomePage: React.FC<HomePageProps> = ({
 
   useEffect(() => {
     const qTours = query(collection(db, 'tours'), orderBy('createdAt', 'desc'), limit(4));
-    const unsubTours = onSnapshot(qTours, (snap) => setFeaturedTours(snap.docs.map(doc => ({ id: doc.id, ...doc.data() }))));
+    const unsubTours = onSnapshot(qTours, (snap) => setFeaturedTours(snap.docs.map(doc => ({ ...doc.data(), id: doc.id }))));
 
     const qDest = query(collection(db, 'destinations'), orderBy('createdAt', 'desc'), limit(5));
     const unsubDest = onSnapshot(qDest, (snap) => {
-      setFeaturedDestinations(snap.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+      setFeaturedDestinations(snap.docs.map(doc => ({ ...doc.data(), id: doc.id })));
       setIsLoading(false);
     });
 

@@ -43,7 +43,7 @@ export const ToursPage: React.FC<ToursPageProps> = ({
   useEffect(() => {
     const q = query(collection(db, 'tours'), orderBy('createdAt', 'desc'));
     const unsub = onSnapshot(q, (snap) => {
-      setTours(snap.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+      setTours(snap.docs.map(doc => ({ ...doc.data(), id: doc.id })));
       setIsLoading(false);
     });
     return () => unsub();

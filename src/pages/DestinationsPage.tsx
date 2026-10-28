@@ -24,10 +24,10 @@ export const DestinationsPage: React.FC = () => {
 
   useEffect(() => {
     const unsubDest = onSnapshot(collection(db, 'destinations'), (snap) => {
-      setDestinations(snap.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+      setDestinations(snap.docs.map(doc => ({ ...doc.data(), id: doc.id })));
     });
     const unsubTours = onSnapshot(collection(db, 'tours'), (snap) => {
-      setTours(snap.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+      setTours(snap.docs.map(doc => ({ ...doc.data(), id: doc.id })));
       setIsLoading(false);
     });
     return () => { unsubDest(); unsubTours(); };

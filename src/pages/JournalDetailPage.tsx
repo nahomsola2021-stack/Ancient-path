@@ -32,9 +32,9 @@ export const JournalDetailPage: React.FC = () => {
           getDocs(collection(db, 'destinations'))
         ]);
 
-        const arts = artsSnap.docs.map(d => ({ id: d.id, ...d.data() }));
+        const arts = artsSnap.docs.map(d => ({ ...d.data(), id: d.id }));
         setAllArticles(arts);
-        setAllTours(toursSnap.docs.map(d => ({ id: d.id, ...d.data() })));
+        setAllTours(toursSnap.docs.map(d => ({ ...d.data(), id: d.id })));
         setAllDestinations(destsSnap.docs.map(d => ({ id: d.id, ...d.data() })));
 
         // Try to match the article by its literal slug, OR by converting its Title to a slug

@@ -20,7 +20,7 @@ export const JournalPage: React.FC = () => {
   useEffect(() => {
     const q = query(collection(db, 'articles'), orderBy('createdAt', 'desc'));
     const unsub = onSnapshot(q, (snap) => {
-      setArticles(snap.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+      setArticles(snap.docs.map(doc => ({ ...doc.data(), id: doc.id })));
       setIsLoading(false);
     });
     return () => unsub();

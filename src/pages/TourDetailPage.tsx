@@ -38,7 +38,7 @@ export const TourDetailPage: React.FC<TourDetailPageProps> = ({
       try {
         if (!id) return;
         const docSnap = await getDoc(doc(db, 'tours', id));
-        if (docSnap.exists()) setTour({ id: docSnap.id, ...docSnap.data() });
+        if (docSnap.exists()) setTour({ ...docSnap.data(), id: docSnap.id });
         else setTour(null);
       } catch (error) { console.error("Error fetching tour:", error); } 
       finally { setIsLoading(false); }

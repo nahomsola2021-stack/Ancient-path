@@ -39,11 +39,11 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
         if (!id) return;
         const destSnap = await getDoc(doc(db, 'destinations', id));
         if (destSnap.exists()) {
-          const destData: any = { id: destSnap.id, ...destSnap.data() };
+          const destData: any = { ...destSnap.data(), id: destSnap.id };
           setDestination(destData);
 
           const toursSnap = await getDocs(collection(db, 'tours'));
-          const allTours = toursSnap.docs.map(d => ({ id: d.id, ...d.data() } as any));
+          const allTours = toursSnap.docs.map(d => ({ ...d.data(), id: d.id } as any));
           const relatedTours = allTours.filter((tour: any) => 
             (destData.connectedTourIds && destData.connectedTourIds.includes(tour.id)) ||
             (tour.route && destData.name && tour.route.toLowerCase().includes(destData.name.toLowerCase()))
@@ -51,7 +51,7 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
           setLinkedTours(relatedTours);
 
           const otherDestSnap = await getDocs(collection(db, 'destinations'));
-          const allDest = otherDestSnap.docs.map(d => ({ id: d.id, ...d.data() } as any));
+          const allDest = otherDestSnap.docs.map(d => ({ ...d.data(), id: d.id } as any));
           setOtherDestinations(allDest.filter((d: any) => d.id !== id).slice(0, 3));
         } else {
           setDestination(null);
