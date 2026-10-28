@@ -23,7 +23,7 @@ export const HomePage: React.FC<HomePageProps> = ({
   onSelectTourModal,
   onOpenBooking
 }) => {
-  const navigate = useNavigate(); // <-- Correctly placed inside the component body
+  const navigate = useNavigate();
   const pageRef = useRef<HTMLDivElement>(null);
   
   const [featuredTours, setFeaturedTours] = useState<any[]>([]);
@@ -105,7 +105,13 @@ export const HomePage: React.FC<HomePageProps> = ({
       <section className="relative h-screen min-h-[700px] w-full flex items-center overflow-hidden bg-black -mt-16 lg:-mt-24">
         {heroSlides.map((slide, idx) => (
           <div key={idx} className={`absolute inset-0 z-0 transition-opacity duration-[1500ms] ease-in-out ${idx === currentSlide ? 'opacity-100' : 'opacity-0'}`}>
-            <img src={slide.image} alt={slide.title} className={`w-full h-full object-cover brightness-[0.65] ${idx === currentSlide ? 'animate-hero-zoom' : 'scale-100'}`} />
+            <img 
+              src={slide.image} 
+              alt={slide.title} 
+              loading={idx === 0 ? "eager" : "lazy"}
+              fetchPriority={idx === 0 ? "high" : "auto"}
+              className={`w-full h-full object-cover brightness-[0.65] ${idx === currentSlide ? 'animate-hero-zoom' : 'scale-100'}`} 
+            />
             <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
           </div>
@@ -131,7 +137,7 @@ export const HomePage: React.FC<HomePageProps> = ({
         <div className="absolute bottom-10 left-0 w-full z-20">
           <div className="max-w-[1400px] mx-auto px-4 md:px-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="flex items-center gap-3">
-<button onClick={prevSlide} aria-label="Previous slide" className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors backdrop-blur-md"><ChevronLeft className="w-5 h-5" /></button>
+              <button onClick={prevSlide} aria-label="Previous slide" className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors backdrop-blur-md"><ChevronLeft className="w-5 h-5" /></button>
               <button onClick={nextSlide} aria-label="Next slide" className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors backdrop-blur-md"><ChevronRight className="w-5 h-5" /></button>
             </div>
             <div className="flex items-center gap-6 w-full md:w-auto">
@@ -146,7 +152,6 @@ export const HomePage: React.FC<HomePageProps> = ({
 
       {/* 2. QUICK DISCOVERY */}
       <section className="py-24 px-4 md:px-8 max-w-[1400px] mx-auto">
-        {/* NATURAL KEYWORD INJECTION: Ethiopian travel agency */}
         <p className="text-center text-gray-500 max-w-2xl mx-auto mb-8 scroll-reveal opacity-0 translate-y-12 transition-all duration-1000">
           As a dedicated <strong>Ethiopian travel agency</strong>, we craft authentic experiences that connect you deeply with the land and its people.
         </p>
@@ -154,7 +159,7 @@ export const HomePage: React.FC<HomePageProps> = ({
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {discoveryCategories.map((cat, idx) => (
             <div key={idx} className="group relative h-56 md:h-80 overflow-hidden cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-1000 rounded-xl" style={{ transitionDelay: `${idx * 100}ms` }}>
-              <img src={cat.image} alt={cat.name} className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110" />
+              <img src={cat.image} alt={cat.name} loading="lazy" className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500" />
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
                 <span className="text-4xl mb-4 transform group-hover:-translate-y-2 transition-transform duration-500">{cat.icon}</span>
@@ -183,7 +188,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               const isLarge = idx === 0; 
               return (
                 <div key={dest.id} onClick={() => navigate(`/destinations/${dest.id}`)} className={`group relative overflow-hidden cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-1000 rounded-2xl ${isLarge ? 'md:col-span-2 md:row-span-2 h-[400px] md:h-full' : 'md:col-span-1 md:row-span-1 h-[300px] md:h-full'}`}>
-                  <img src={dest.image} alt={dest.name} className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105" />
+                  <img src={dest.image} alt={dest.name} loading="lazy" className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-700" />
                   <div className="absolute bottom-8 left-8 right-8">
                     <h3 className={`font-serif text-white ${isLarge ? 'text-5xl md:text-6xl' : 'text-3xl'} mb-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500`}>{dest.name}</h3>
@@ -225,7 +230,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               {featuredTours.map((tour) => (
                 <div key={tour.id} className="group cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-1000" onClick={() => navigate(`/tours/${tour.id}`)}>
                   <div className="relative h-[450px] overflow-hidden mb-8 rounded-2xl">
-                    <img src={tour.image || 'https://via.placeholder.com/600'} alt={tour.title} className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105" />
+                    <img src={tour.image || 'https://via.placeholder.com/600'} alt={tour.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105" />
                     <div className="absolute top-6 left-6 bg-white px-4 py-2 text-[10px] font-bold uppercase tracking-widest shadow-lg rounded-sm">
                       {tour.daysCount || 1} Days
                     </div>
@@ -254,7 +259,7 @@ export const HomePage: React.FC<HomePageProps> = ({
         {visualStory.map((story, idx) => (
           <div key={idx} className="relative h-[70vh] md:h-[90vh] w-full flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0">
-              <img src={story.image} alt={story.title} className="w-full h-full object-cover opacity-50" style={{ transform: 'translateZ(0)' }} />
+              <img src={story.image} alt={story.title} loading="lazy" className="w-full h-full object-cover opacity-50" style={{ transform: 'translateZ(0)' }} />
             </div>
             <h2 className="relative z-10 text-5xl md:text-8xl font-serif text-white uppercase text-center scroll-reveal opacity-0 translate-y-12 transition-all duration-1000 drop-shadow-2xl px-4">{story.title}</h2>
           </div>
@@ -287,7 +292,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             ].map((story, idx) => (
               <div key={idx} className="group cursor-pointer scroll-reveal opacity-0 translate-y-12 transition-all duration-1000" style={{ transitionDelay: `${idx * 150}ms` }}>
                 <div className="relative h-72 overflow-hidden mb-6 rounded-2xl">
-                  <img src={story.img} alt={story.title} className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105" />
+                  <img src={story.img} alt={story.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105" />
                 </div>
                 <h3 className="font-bold tracking-widest uppercase text-sm md:text-base text-gray-800 group-hover:text-[#B85C38] transition-colors leading-relaxed">{story.title}</h3>
               </div>
@@ -310,7 +315,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* 9. FINAL BOOKING SECTION */}
       <section className="relative h-[70vh] w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789842587/tdxfdqwvdwbuzh3uuus6.jpg" alt="Plan Your Trip" className="w-full h-full object-cover brightness-[0.40]" />
+          <img src="https://res.cloudinary.com/dw1ohipim/image/upload/f_auto,q_auto,w_1600/v1789842587/tdxfdqwvdwbuzh3uuus6.jpg" alt="Plan Your Trip" loading="lazy" className="w-full h-full object-cover brightness-[0.40]" />
         </div>
         <div className="relative z-10 text-center px-4 scroll-reveal opacity-0 translate-y-12 transition-all duration-1000">
           <span className="text-xs font-bold tracking-[0.3em] text-[#B85C38] block mb-6 uppercase">Begin Your Adventure</span>
@@ -328,3 +333,4 @@ export const HomePage: React.FC<HomePageProps> = ({
   );
 };
 
+export default HomePage;
