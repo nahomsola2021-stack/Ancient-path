@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   X, 
   UploadCloud, 
@@ -44,6 +44,41 @@ export const AdminTourModal: React.FC<AdminTourModalProps> = ({
       { day: 1, title: '', description: '', accommodation: '', meals: 'Breakfast, Lunch, Dinner' }
     ]
   });
+
+  // Auto-fill form when the modal opens in edit mode, or reset for new packages
+  useEffect(() => {
+    if (isOpen) {
+      if (initialData) {
+        setFormData({
+          title: initialData.title || '',
+          route: initialData.route || '',
+          duration: initialData.duration || '',
+          daysCount: initialData.daysCount || 1,
+          category: initialData.category || 'cultural',
+          price: initialData.price || '',
+          summary: initialData.summary || '',
+          image: initialData.image || '',
+          itinerary: initialData.itinerary || [
+            { day: 1, title: '', description: '', accommodation: '', meals: 'Breakfast, Lunch, Dinner' }
+          ]
+        });
+      } else {
+        setFormData({
+          title: '',
+          route: '',
+          duration: '',
+          daysCount: 1,
+          category: 'cultural',
+          price: '',
+          summary: '',
+          image: '',
+          itinerary: [
+            { day: 1, title: '', description: '', accommodation: '', meals: 'Breakfast, Lunch, Dinner' }
+          ]
+        });
+      }
+    }
+  }, [isOpen, initialData]);
 
   if (!isOpen) return null;
 
