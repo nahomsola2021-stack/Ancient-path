@@ -32,16 +32,27 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
 
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }); }, [id]);
 
-  useEffect(() => {
+useEffect(() => {
     const fetchDestinationData = async () => {
       setIsLoading(true);
       try {
         if (!id) return;
-        const destSnap = await getDoc(doc(db, 'destinations', id));
-        if (destSnap.exists()) {
-          const destData: any = { ...destSnap.data(), id: destSnap.id };
+
+        // Fetch ALL destinations first to do a smart match
+        const destsSnap = await getDocs(collection(db, 'destinations'));
+        const allDests = destsSnap.docs.map(d => ({ ...d.data(), id: d.id } as any));
+
+        // Try to find a match by exact Firebase ID, OR by matching the name slug
+        const destData = allDests.find((d: any) => 
+          d.id === id || 
+          (d.name && d.name.toLowerCase().replace(/[\s_]+/g, '-') === id?.toLowerCase().replace(/[\s_]+/g, '-')) ||
+          (d.id && d.id.toLowerCase().includes(id?.toLowerCase() || ''))
+        );
+
+        if (destData) {
           setDestination(destData);
 
+          // Fetch and map related tours
           const toursSnap = await getDocs(collection(db, 'tours'));
           const allTours = toursSnap.docs.map(d => ({ ...d.data(), id: d.id } as any));
           const relatedTours = allTours.filter((tour: any) => 
@@ -50,9 +61,8 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
           );
           setLinkedTours(relatedTours);
 
-          const otherDestSnap = await getDocs(collection(db, 'destinations'));
-          const allDest = otherDestSnap.docs.map(d => ({ ...d.data(), id: d.id } as any));
-          setOtherDestinations(allDest.filter((d: any) => d.id !== id).slice(0, 3));
+          // Set other destinations for the sidebar
+          setOtherDestinations(allDests.filter((d: any) => d.id !== destData.id).slice(0, 3));
         } else {
           setDestination(null);
         }
